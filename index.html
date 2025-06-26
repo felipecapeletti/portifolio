@@ -9,9 +9,9 @@
   <script src="ProfileFlip.js"></script>
   <style>
     body {
-      background: linear-gradient(270deg, #8400db, #0025cc, #00b7ff);
+      background: linear-gradient(270deg, #8400db, #051e8b, #00b7ff);
       background-size: 600% 600%;
-      animation: gradientMove 10s ease infinite;
+      animation: gradientMove 7s ease infinite;
     }
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
@@ -28,9 +28,9 @@
     }
   </style>
 </head>
-<body class="w-[100vw] h-[100vh] flex flex-col justify-between items-center text-white font-sans">
+<body class="w-[100vw] h-[100vh] flex flex-col justify-between items-center text-white font-sans pt-10 md:gap-8">
     <section class="w-[90vw] flex flex-col md:flex-row justify-between items-center p-4">
-        <div class="w-fit flex justify-between items-center gap-2 md:gap-10">
+        <div class="w-fit flex flex-col md:flex-row justify-between items-center gap-2 md:gap-10">
             <img 
             id="profile-img"
             class="border-4 border-white rounded-full cursor-pointer w-48 h-48 object-cover" 
@@ -38,9 +38,9 @@
             alt="Imagem de Perfil"
             onclick="flipImage(this)"
             >
-            <h1 class="text-xl md:text-6xl">Felipe Gerardi</h1>
+            <h1 class="text-xl md:text-6xl font-bold">Felipe Gerardi</h1>
         </div>
-        <div class="w-full md:w-fit flex justify-end items-center gap-4 mt-6">
+        <div class="w-full md:w-fit flex justify-center md:justify-end items-center gap-4 mt-6">
             <a href="mailto:dev.fgerardi@gmail.com" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-envelope-at-fill"></i></a>
             <a href="https://api.whatsapp.com/send/?phone=5516982214553&text&type=phone_number&app_absent=0" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-whatsapp"></i></a>
             <a href="https://www.linkedin.com/in/felipe-gerardi-968322203/" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-linkedin"></i></a>
@@ -48,46 +48,72 @@
     </section>
 
     <section class="w-[90vw] mx-auto mt-10 px-4">
-        <h2 class="text-3xl font-semibold mb-6 border-b border-gray-300 pb-2">Featured Projects 🚀</h2>
+        <div class="w-full mb-6 border-b border-gray-300 pb-1">
+            <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Featured Projects 🚀</h2>
+        </div>
         <div class="grid md:grid-cols-3 gap-6">
 
             <!-- Pokédex -->
-            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition gap-3">
+            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700 gap-3">
                 <h3 class="text-2xl font-bold mb-2">Pokédex</h3>
                 <p class="mb-4">Interactive Pokédex web app built with React and Tailwind.</p>
                 <img src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/pokedex.png" class="w-full h-fit shadow-xl rounded-xl" alt="Imagem de Representação">
                 <div class="w-full h-fit flex justify-between items-center mt-10">
-                    <a href="https://poke-land.vercel.app/" target="_blank" class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
-                    <a href="https://github.com/felipecapeletti/pokeland" target="_blank" class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
+                    <a 
+                    href="https://poke-land.vercel.app/" 
+                    target="_blank" referer="noopener noreferrer"
+                    class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
+                    
+                    <a href="https://github.com/felipecapeletti/pokeland"
+                    target="_blank" referer="noopener noreferrer" 
+                    class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
                 </div>
             </div>
 
             <!-- Landing Page 3D -->
-            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition">
+            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700">
                 <h3 class="text-2xl font-bold mb-2">Landing Page 3D</h3>
                 <p class="mb-4">Modern landing page with 3D object integration.</p>
                 <img src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/lp3d.png" class="w-full h-fit shadow-xl rounded-xl" alt="Imagem de Representação">
                 <div class="w-full h-fit flex justify-between items-center mt-10">
-                    <a href="https://palevioletred-ram-828184.hostingersite.com/" target="_blank" class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
-                    <a href="https://github.com/felipecapeletti/LP-3D-Watch" target="_blank" class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
+                    <a 
+                    href="https://palevioletred-ram-828184.hostingersite.com/" 
+                    target="_blank" referer="noopener noreferrer" 
+                    class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
+
+                    <a 
+                    href="https://github.com/felipecapeletti/LP-3D-Watch" 
+                    target="_blank" referer="noopener noreferrer" 
+                    class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
                 </div>
             </div>
 
             <!-- To Do List Drag & Drop -->
-            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition">
+            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700">
                 <h3 class="text-2xl font-bold mb-2">To Do List Drag & Drop</h3>
                 <p class="mb-4">Task manager with draggable cards and status columns.</p>
                 <img src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/todolist.png" class="w-full h-fit shadow-xl rounded-xl" alt="Imagem de Representação">
                 <div class="w-full h-fit flex justify-between items-center mt-10">
-                    <a href="https://mediumorchid-louse-547026.hostingersite.com/" target="_blank" class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
-                    <a href="https://github.com/felipecapeletti/todo-dragdrop" target="_blank" class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
+                    <a 
+                    href="https://mediumorchid-louse-547026.hostingersite.com/" 
+                    target="_blank" 
+                    referer="noopener noreferrer"
+                    class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
+                   
+                    <a 
+                    href="https://github.com/felipecapeletti/todo-dragdrop" 
+                    target="_blank" 
+                    referer="noopener noreferrer"
+                    class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="w-[90vw] mx-auto mt-10 px-4">
-        <h2 class="text-3xl font-semibold mb-6 border-b border-gray-300 pb-2">Technologies 💻</h2>
+        <div class="w-full mb-6 border-b border-gray-300 pb-1">
+            <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Technologies 💻</h2>
+        </div>
         <div class="w-full flex flex-col md:flex-row justify-evenly items-center bg-white py-10 px-4 md:px-8 rounded-2xl shadow-xl gap-8 md:gap-4">
             <div class="w-full md:w-fit flex flex-col md:flex-row items-center gap-6">
                 <h3 class="w-fit text-center md:text-left md:w-fit border-b border-black md:border-none text-black font-semibold text-xl md:text-2xl">🤖 Experienced with:</h3>
@@ -126,8 +152,26 @@
         </div>
     </section>
 
+    <section class="w-[90vw] mx-auto mt-10 px-4">
+        <div class="w-full mb-6 border-b border-gray-300 pb-1">
+            <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Certificados 📋</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <a
+            target="_blank"
+            referer="noopener noreferrer"
+            href="https://udemy-certificate.s3.amazonaws.com/image/UC-29d5b66e-fd5d-4664-b8a3-225bea0123d0.jpg"
+            class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700 gap-3">
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-29d5b66e-fd5d-4664-b8a3-225bea0123d0.jpg" alt="Certificado">
+            </a>
+        </div>
+    </section>
+
     <footer class="w-[90vw] text-center text-sm mt-16 py-4 border-t border-gray-400">
-        &copy; 2025 Felipe Gerardi. All rights reserved.
+        &copy; <span id="current-year"></span> Felipe Gerardi. All rights reserved.
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
     </footer>
 </body>
 </html>
