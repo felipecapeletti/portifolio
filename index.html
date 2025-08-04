@@ -26,11 +26,21 @@
         from { transform: rotateY(0deg); }
         to { transform: rotateY(360deg); }
     }
+    
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(1.5rem);
+      transition: all 0.7s ease-out;
+    }
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="w-[100vw] h-[100vh] flex flex-col justify-between items-center text-white font-sans pt-10 md:gap-8">
     <section class="w-[90vw] flex flex-col md:flex-row justify-between items-center p-4">
-        <div class="w-fit flex flex-col md:flex-row justify-between items-center gap-2 md:gap-10">
+        <div class="scroll-reveal w-fit flex flex-col md:flex-row justify-between items-center gap-2 md:gap-10">
             <img 
             id="profile-img"
             class="border-4 border-white rounded-full cursor-pointer w-48 h-48 object-cover" 
@@ -40,18 +50,39 @@
             >
             <h1 class="text-xl md:text-6xl font-bold">Felipe Gerardi</h1>
         </div>
-        <div class="w-full md:w-fit flex justify-center md:justify-end items-center gap-4 mt-6">
-            <a href="mailto:dev.fgerardi@gmail.com" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-envelope-at-fill"></i></a>
-            <a href="https://api.whatsapp.com/send/?phone=5516982214553&text&type=phone_number&app_absent=0" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/felipe-gerardi-968322203/" target="_blank" class="text-white text-2xl hover:scale-105 cursor-pointer"><i class="bi bi-linkedin"></i></a>
+        <div class="scroll-reveal w-full md:w-fit flex justify-center md:justify-end items-center gap-4 mt-6">
+            <a 
+            href="https://github.com/felipecapeletti?tab=repositories"
+            target="_blank"
+            class="text-white text-2xl hover:scale-105 cursor-pointer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a 
+            href="mailto:dev.fgerardi@gmail.com" 
+            target="_blank" 
+            class="text-white text-2xl hover:scale-105 cursor-pointer">
+                <i class="bi bi-envelope-at-fill"></i>
+            </a>
+            <a 
+            href="https://api.whatsapp.com/send/?phone=5516982214553&text&type=phone_number&app_absent=0" 
+            target="_blank" 
+            class="text-white text-2xl hover:scale-105 cursor-pointer">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a 
+            href="https://www.linkedin.com/in/felipe-gerardi-968322203/" 
+            target="_blank" 
+            class="text-white text-2xl hover:scale-105 cursor-pointer">
+                <i class="bi bi-linkedin"></i>
+            </a>
         </div>
     </section>
 
     <section class="w-[90vw] mx-auto mt-10 px-4">
-        <div class="w-full mb-6 border-b border-gray-300 pb-1">
+        <div class="scroll-reveal w-full mb-6 border-b border-gray-300 pb-1">
             <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Featured Projects 🚀</h2>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="scroll-reveal grid md:grid-cols-3 gap-6">
 
             <!-- Pokédex -->
             <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700 gap-3">
@@ -88,6 +119,26 @@
                 </div>
             </div>
 
+            <!-- Site VR -->
+            <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700">
+                <h3 class="text-2xl font-bold mb-2">Fake VR Site</h3>
+                <p class="mb-4">Website of a fictitious company focused on VR games development.</p>
+                <img src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/08/Captura-de-tela-2025-08-03-230744.png" class="w-full h-fit shadow-xl rounded-xl" alt="Imagem de Representação">
+                <div class="w-full h-fit flex justify-between items-center mt-10">
+                    <a 
+                    href="https://vrlabs-page.vercel.app/" 
+                    target="_blank" 
+                    referer="noopener noreferrer"
+                    class="w-fit bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-xl cursor-pointer">View Project</a>
+                   
+                    <a 
+                    href="https://github.com/felipecapeletti/vr-lp" 
+                    target="_blank" 
+                    referer="noopener noreferrer"
+                    class="text-4xl text-indigo-600 hover:text-indigo-800 cursor-pointer"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+
             <!-- To Do List Drag & Drop -->
             <div class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700">
                 <h3 class="text-2xl font-bold mb-2">To Do List Drag & Drop</h3>
@@ -111,41 +162,49 @@
     </section>
 
     <section class="w-[90vw] mx-auto mt-10 px-4">
-        <div class="w-full mb-6 border-b border-gray-300 pb-1">
+        <div class="scroll-reveal w-full mb-6 border-b border-gray-300 pb-1">
             <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Technologies 💻</h2>
         </div>
         <div class="w-full flex flex-col md:flex-row justify-evenly items-center bg-white py-10 px-4 md:px-8 rounded-2xl shadow-xl gap-8 md:gap-4">
-            <div class="w-full md:w-fit flex flex-col md:flex-row items-center gap-6">
+            <div class="scroll-reveal w-full md:w-fit flex flex-col md:flex-row items-center gap-6">
                 <h3 class="w-fit text-center md:text-left md:w-fit border-b border-black md:border-none text-black font-semibold text-xl md:text-2xl">🤖 Experienced with:</h3>
                 <div class="w-fit flex flex-wrap justify-center md:justify-start items-center gap-4">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://v2.tailwindcss.com/docs')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/tailwind.png" alt="Tailwind">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://developer.mozilla.org/pt-BR/docs/Web/HTML')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/icone-html-orange.png" alt="HTML 5">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://developer.mozilla.org/pt-BR/docs/Web/JavaScript')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/JavaScript-logo.png" alt="JavaScript">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://pt-br.react.dev/learn')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/React.webp" alt="React">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://laravel.com/docs/12.x/installation')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/laravel-icon-497x512-uwybstke.png" alt="Laravel">
                 </div>
             </div>
-            <div class="w-full md:w-fit flex flex-col md:flex-row items-center gap-6">
+            <div class="scroll-reveal w-full md:w-fit flex flex-col md:flex-row items-center gap-6">
                 <h3 class="w-fit text-center md:text-left md:w-fit border-b border-black md:border-none text-black font-semibold text-xl md:text-2xl">📚 Learning:</h3>
                 <div class="w-fit flex flex-wrap justify-center md:justify-start items-center gap-4">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://www.typescriptlang.org/pt/docs/')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/typescript_plain_logo_icon_146316.webp" alt="TypeScript">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://docs.python.org/pt-br/3/')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/9bb722f0e85ddbc1ce0f064534fd2311-icone-da-linguagem-de-programacao-python.png" alt="Python">
                     <img 
-                        class="h-[50px] md:h-[70px] hover:scale-105 transition-transform"
+                        onclick="window.open('https://docs.djangoproject.com/pt-br/5.2/')"
+                        class="h-[40px] md:h-[50px] hover:scale-105 transition-transform cursor-pointer"
                         src="https://maroon-eel-451087.hostingersite.com/wp-content/uploads/2025/06/django-logo-png_seeklogo-394570.png" alt="Django">
                 </div>
             </div>
@@ -156,13 +215,20 @@
         <div class="w-full mb-6 border-b border-gray-300 pb-1">
             <h2 class="w-full md:w-fit bg-white text-gray-900 text-3xl text-center font-semibold rounded-xl p-3">Certificados 📋</h2>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="scroll-reveal grid md:grid-cols-3 gap-6">
             <a
             target="_blank"
             referer="noopener noreferrer"
             href="https://udemy-certificate.s3.amazonaws.com/image/UC-29d5b66e-fd5d-4664-b8a3-225bea0123d0.jpg"
             class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700 gap-3">
                 <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-29d5b66e-fd5d-4664-b8a3-225bea0123d0.jpg" alt="Certificado">
+            </a>
+            <a
+            target="_blank"
+            referer="noopener noreferrer"
+            href="https://udemy-certificate.s3.amazonaws.com/image/UC-e7d05b4e-666a-4dc1-89a3-ed5587bcdd35.jpg?v=1751387139000"
+            class="flex flex-col justify-between bg-white text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition duration-700 gap-3">
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-e7d05b4e-666a-4dc1-89a3-ed5587bcdd35.jpg?v=1751387139000" alt="Certificado">
             </a>
         </div>
     </section>
@@ -173,5 +239,18 @@
           document.getElementById('current-year').textContent = new Date().getFullYear();
         </script>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            entry.target.classList.toggle('is-visible', entry.isIntersecting);
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+        });
+    </script>
 </body>
 </html>
